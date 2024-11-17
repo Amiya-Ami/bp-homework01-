@@ -89,8 +89,19 @@ console.log(Arr502);
 
 const Arr601 = [1,2,3,4,5];
 
-const input06 = 1 ;
+const input06 = 3 ;
 
+function movenum(Arr601,x){
 
+x = (x % (Arr601.length)) - 1 ;  // mod length ของ Arr601
 
-console.log();
+for (let i = 0; i < x ; i++){
+     Arr601.push(Arr601[i]);     // [1,2,3,4,5,1,2] after loop
+}
+
+Arr601.splice(0,x);      // Splice 2 elements first 
+
+console.log(Arr601);
+}
+
+movenum(Arr601,input06);
