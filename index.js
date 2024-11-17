@@ -29,22 +29,54 @@ console.log(Arr301);
 
 //   4.
 
-let Num41 = "XIV" ;
+function RomanToInt (roman)  {
 
-function Num042(value,index)  {
+const RomanNum = {
 
+    I: 1 ,
+    V: 5 ,
+    X: 10 ,
+    L: 50 ,
 
+    };
 
+let result = 0; 
+let preValue = 0;
+
+for (let i = roman.length - 1; i >= 0 ; i--){  // 3 - 1 ; i = 2 ; 
+    const curValue = RomanNum[roman[i]];    //1/ curVal = X  //2/ curVal = I //3/ curVal  = V
+
+    if (curValue >= preValue){          
+        result += curValue ;               //1/ result + 10  //3/ result + 5
+    } else {
+        result -= curValue ;               //2/ result - 1 
+    }
+    preValue = curValue ;                  //1/ preval = 10   //2/ preval = 1 
+    }
+return result;                             //3l result = 14 
 }
 
+const RomanNum = 'XIV'
 
-console.log(Num41);
+const Final = RomanToInt(RomanNum);
+console.log(Final);
+
 
 
 //   5.
 //output : [1,2,3,4,5]
 const Arr501 = [1,2,1,4,5,2,3,4,1,4];
 
+const Arr502 = Arr501.filter((value, index, self) => {
+    return self.indexOf(value) === index;
+  });
+function compareNum (x,y){
+    return x - y ; 
+}
+ Arr502.sort(compareNum);
+
+
+console.log(Arr502);
 
 
 
