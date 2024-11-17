@@ -65,11 +65,13 @@ console.log(Final);
 
 //   5.
 //output : [1,2,3,4,5]
+
 const Arr501 = [1,2,1,4,5,2,3,4,1,4];
 
 const Arr502 = Arr501.filter((value, index, self) => {
     return self.indexOf(value) === index;
   });
+
 function compareNum (x,y){
     return x - y ; 
 }
@@ -81,4 +83,14 @@ console.log(Arr502);
 
 
 
-//    6. 
+//    6. Rotate Array 
+//  dec : ขยับ array to right n ครั้ง 
+// array [1,2,3,4,5] input : 3 output : [3,4,5,1,2]
+
+const Arr601 = [1,2,3,4,5];
+
+const input06 = 1 ;
+
+
+
+console.log();
